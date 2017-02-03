@@ -5,3 +5,9 @@ body {
 main {
 	font-family: helvetica; 
 }
+
+.quote-box {
+	display: block;
+	margin-left, margin-right: auto; 
+	background-color: aqua; 
+}
