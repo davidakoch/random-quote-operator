@@ -8,11 +8,12 @@ main {
 
 .btn {
 	background-color: lightblue;
+	border-radius: 3px;
 }
 
 .quote-box {
 	display: block;
-	background-color: aqua; 
+	background-color: #fff; 
 	width: 450px;
 	height: 150px;
 	margin-top: 100px;
@@ -34,18 +35,27 @@ main {
 	cursor: pointer;
 }
 
+.fa-twitter {
+	color: #fff;
+}
+
 #twitter-button:hover {
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 #quote-button {
 	float: right;
 	margin-right: 15px;
 	margin-top: 100px; 
-	cursor: pointer; 
+	cursor: pointer;
+	color: #fff;
 }
 
 #quote-button:hover {
-	opacity: 0.9; 
+	opacity: 0.8; 
+}
+
+#footer-name a{
+	color: #fff;
 }
 
