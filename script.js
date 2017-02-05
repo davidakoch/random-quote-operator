@@ -1,6 +1,18 @@
 
 
 //code by David Koch
+//my code
+$(document).ready(function() {
+	function getNewQuote() {
+		$.ajax({
+
+		});
+	}
+});
+
+
+
+//borrowed code
 
 
 function inIframe () { 
