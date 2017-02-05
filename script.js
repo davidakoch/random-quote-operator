@@ -11,13 +11,16 @@ var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c',
 '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", 
 "#73A857"];
 
+//empty variable
+
 var currentQuote = '', currentAuthor = '';
 
 function openURL(url){
   window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
 }
-
+//the function that gets quote
 function getQuote() {
+	//jquery method that loads json data
   $.ajax({
     headers: {
       "X-Mashape-Key": "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
@@ -26,6 +29,10 @@ function getQuote() {
     },
     url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
     success: function(response) {
+      //does something with the response
+      //you are using json.parse to create an object r
+      //current quote is equal to quote
+      //current author is equal to author
       var r = JSON.parse(response);
       currentQuote = r.quote;
       currentAuthor = r.author;
@@ -33,6 +40,7 @@ function getQuote() {
       {
         $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
       }
+      //this animates the div quote text
       $(".quote-text").animate({
           opacity: 0
         }, 500,
@@ -42,7 +50,7 @@ function getQuote() {
           }, 500);
           $('#text').text(r.quote);
         });
-
+      //this animates the div quote author
       $(".quote-author").animate({
           opacity: 0
         }, 500,
@@ -53,6 +61,7 @@ function getQuote() {
           $('#author').html(r.author);
         });
 
+      //this animates the background color and button color
       var color = Math.floor(Math.random() * colors.length);
       $("html body").animate({
         backgroundColor: colors[color],
@@ -64,6 +73,9 @@ function getQuote() {
     }
   });
 }
+
+//this actually affects the DOM
+
 $(document).ready(function() {
   getQuote();
   $('#new-quote').on('click', getQuote);

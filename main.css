@@ -6,6 +6,14 @@ main {
 	font-family: helvetica; 
 }
 
+.main-header {
+	text-align: center;
+}
+
+.sub-header {
+	text-align: center;
+}
+
 .btn {
 	background-color: lightblue;
 	border-radius: 3px;
