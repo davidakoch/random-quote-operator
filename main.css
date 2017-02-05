@@ -23,11 +23,20 @@ main {
 	display: block;
 	background-color: #fff; 
 	width: 450px;
-	height: 150px;
+	height: 200px;
 	margin: 0 auto;
 	margin-top: 100px;
 	border-radius: 3px; 
 
+}
+
+.quote-text {
+	padding-top: 15px; 
+	padding-left: 15px; 
+}
+
+.quote-author {
+	padding-left: 15px; 
 }
 
 .footer {
@@ -40,7 +49,7 @@ main {
 #twitter-button {
 	float: left;
 	margin-left: 15px;
-	margin-top: 100px; 
+	margin-top: 75px; 
 	cursor: pointer;
 }
 
@@ -55,7 +64,7 @@ main {
 #quote-button {
 	float: right;
 	margin-right: 15px;
-	margin-top: 100px; 
+	margin-top: 75px; 
 	cursor: pointer;
 	color: #fff;
 }
