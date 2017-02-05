@@ -8,13 +8,21 @@ $(document).ready(function() {
 			//base url
 			//need to put quotes around it
 			url: 'http://api.forismatic.com/api/1.0/', 
+			jsonp: 'jsonp',
+			dataType: 'jsonp'
 			data: {
 				method: 'getQuote',
 				lang: 'en',
-				format: 'json'
+				format: 'jsonp'
+			},
+			//if you have a successful response
+			success: function(response){
+				console.log(response.quoteTest);
+
 			}
 		});
 	}
+	getNewQuote();
 });
 
 
@@ -22,7 +30,7 @@ $(document).ready(function() {
 //borrowed code
 
 
-function inIframe () { 
+/*function inIframe () { 
 	try { return window.self !== window.top; } 
 	catch (e) { return true; } }
 
@@ -110,3 +118,4 @@ $(document).ready(function() {
     }
   });
 });
+*/
