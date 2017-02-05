@@ -5,7 +5,14 @@
 $(document).ready(function() {
 	function getNewQuote() {
 		$.ajax({
-
+			//base url
+			//need to put quotes around it
+			url: 'http://api.forismatic.com/api/1.0/', 
+			data: {
+				method: 'getQuote',
+				lang: 'en',
+				format: 'json'
+			}
 		});
 	}
 });
@@ -39,6 +46,7 @@ function getQuote() {
       Accept: "application/json",
       "Content-Type": "application/x-www-form-urlencoded"
     },
+    //base urel where they got the quotes
     url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
     success: function(response) {
       //does something with the response
