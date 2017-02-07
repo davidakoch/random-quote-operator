@@ -26,7 +26,7 @@ $(document).ready(function() {
 				if(author){
 					$('#quote-author').text('-- ' + author);
 				} else {
-					$('quote-author').text('-- unknown');
+					$('#quote-author').text('-- unknown');
 				}
 
 			}
@@ -34,7 +34,8 @@ $(document).ready(function() {
 	}
 	getNewQuote();
 
-	$('.quote-button').on('click', function(){
+	$('#quote-button').on('click', function(event) {
+		event.preventDefault;
 		getNewQuote();
 	});
 });
