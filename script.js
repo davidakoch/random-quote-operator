@@ -2,7 +2,7 @@
 
 //code by David Koch
 //my code
-$(document).ready(function() {
+
 
 	var quote;
 
@@ -32,12 +32,18 @@ $(document).ready(function() {
 			}
 		});
 	}
+	
+$(document).ready(function() {
 	getNewQuote();
-
 	$('#quote-button').on('click', function(event) {
-		event.preventDefault;
+		event.preventDefault();
 		getNewQuote();
 	});
+
+	$('#twitter-button').on('click', function(event){
+		event.preventDefault();
+		window.open('https://www.twitter.com/intent/tweet?text=' + encodeURIComponent(quote + '-- ' + author));
+	} )
 });
 
 
