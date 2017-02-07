@@ -3,13 +3,16 @@
 //code by David Koch
 //my code
 $(document).ready(function() {
+
+	var quote;
+
 	function getNewQuote() {
 		$.ajax({
 			//base url
 			//need to put quotes around it
 			url: 'http://api.forismatic.com/api/1.0/', 
 			jsonp: 'jsonp',
-			dataType: 'jsonp'
+			dataType: 'jsonp',
 			data: {
 				method: 'getQuote',
 				lang: 'en',
@@ -17,7 +20,8 @@ $(document).ready(function() {
 			},
 			//if you have a successful response
 			success: function(response){
-				console.log(response.quoteTest);
+				quote = response.quoteText;
+				author = response.quoteAutor; 
 
 			}
 		});
