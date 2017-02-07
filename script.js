@@ -22,10 +22,11 @@ $(document).ready(function() {
 			success: function(response){
 				quote = response.quoteText;
 				author = response.quoteAuthor; 
+				$('#quote-text').text(quote);
 				if(author){
 					$('#quote-author').text('-- ' + author);
 				} else {
-					$('quote-author').text('--unknown');
+					$('quote-author').text('-- unknown');
 				}
 
 			}
