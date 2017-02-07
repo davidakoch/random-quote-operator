@@ -33,6 +33,10 @@ $(document).ready(function() {
 		});
 	}
 	getNewQuote();
+
+	$('.quote-button').on('click', function(){
+		getNewQuote();
+	});
 });
 
 
