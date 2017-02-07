@@ -19,7 +19,7 @@ main {
 	border-radius: 3px;
 }
 
-.quote-box {
+#quote-box {
 	display: block;
 	background-color: #fff; 
 	width: 450px;
@@ -30,12 +30,12 @@ main {
 
 }
 
-.quote-text {
+#quote-text {
 	padding-top: 15px; 
 	padding-left: 15px; 
 }
 
-.quote-author {
+#quote-author {
 	padding-left: 15px; 
 }
 

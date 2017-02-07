@@ -21,7 +21,12 @@ $(document).ready(function() {
 			//if you have a successful response
 			success: function(response){
 				quote = response.quoteText;
-				author = response.quoteAutor; 
+				author = response.quoteAuthor; 
+				if(author){
+					$('#quote-author').text('-- ' + author);
+				} else {
+					$('quote-author').text('--unknown');
+				}
 
 			}
 		});
